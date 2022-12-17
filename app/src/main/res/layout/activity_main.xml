@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--    /*File name: Final Exam BMI Calculator-->
+<!--    Author Name: Benny Baby-->
+<!--    STUDENT ID : 200469127-->
+<!--    App Description : CREATE A BMI Calculator-->
+<!--    Version: Android Studio Dolphin | 2021.3.1 for Windows 64-bit */-->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
