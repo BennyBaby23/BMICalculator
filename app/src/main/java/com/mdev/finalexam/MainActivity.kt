@@ -19,6 +19,7 @@ Version: Android Studio Dolphin | 2021.3.1 for Windows 64-bit */
 
 class MainActivity : AppCompatActivity() {
 
+    //initializing database and list
     private lateinit var database: DatabaseReference
     private lateinit var bmiList: MutableList<BMI>
 
@@ -59,6 +60,7 @@ class MainActivity : AppCompatActivity() {
 
     ) {
 
+
         calButton.setOnClickListener {
             val weight = weightText.text.toString()
             val height = heightText.text.toString()
@@ -66,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
 
             //calculating Bmi
-            if (validateInput(weight, height)) {
+            if (validateInput(weight, height, name)) {
                 val bmi = weight.toFloat() / ((height.toFloat() / 100) * (height.toFloat() / 100))
                 val bmi2Digits = String.format("%.2f", bmi).toFloat()
 
