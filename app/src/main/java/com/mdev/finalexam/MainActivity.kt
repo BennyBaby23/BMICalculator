@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         //Variable object to initialize input and button
         val weightKgText = findViewById<EditText>(R.id.etWeight)
         val heightCmText = findViewById<EditText>(R.id.etHeight)
+
         val submitButton = findViewById<Button>(R.id.btnCalculate)
 
 
@@ -34,11 +35,13 @@ class MainActivity : AppCompatActivity() {
     private fun submitValidation(
         calButton: Button,
         weightText: EditText,
-        heightText: EditText
+        heightText: EditText,
+
     ) {
         calButton.setOnClickListener {
             val weight = weightText.text.toString()
             val height = heightText.text.toString()
+
 
             if (validateInput(weight, height)) {
                 val bmi = weight.toFloat() / ((height.toFloat() / 100) * (height.toFloat() / 100))
@@ -72,9 +75,11 @@ class MainActivity : AppCompatActivity() {
         val resultIndex = findViewById<TextView>(R.id.tvIndex)
         val resultDetails = findViewById<TextView>(R.id.tvResult)
         val info = findViewById<TextView>(R.id.tvInfo)
+        val name = findViewById<TextView>(R.id.textName)
 
         resultIndex.text = bmi.toString()
-        info.text = "Your BMI:"
+
+        info.text = "Your BMI:" + name.text
 
         var resultText = ""
         var color = 0
